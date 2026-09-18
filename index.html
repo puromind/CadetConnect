@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="CadetConnect — a private community for academy life, conversations, and everyday commerce.">
+  <title>CadetConnect — Your academy community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#" aria-label="CadetConnect home">
+        <span class="brand-mark">cc</span>
+        <span>Cadet<span>Connect</span></span>
+      </a>
+      <div class="profile-mini">
+        <div class="avatar avatar-olive">AO</div>
+        <div><strong>Amaka Okafor</strong><small>Cadet · Level 400</small></div>
+        <span class="verified" title="Verified profile">✓</span>
+      </div>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="feed"><span class="nav-icon">⌂</span>Feed</button>
+        <button class="nav-item" data-view="chats"><span class="nav-icon">◌</span>Chats <b class="count">3</b></button>
+        <button class="nav-item" data-view="marketplace"><span class="nav-icon">▱</span>Marketplace</button>
+        <button class="nav-item" data-view="communities"><span class="nav-icon">◎</span>Communities</button>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="nav-item" data-action="notifications"><span class="nav-icon">♧</span>Notifications <b class="notification-dot"></b></button>
+        <button class="nav-item" data-action="settings"><span class="nav-icon">⚙</span>Settings</button>
+        <div class="safety-note"><span>✦</span><div><strong>Keep it community-safe</strong><small>Share support, not sensitive operational details.</small></div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" aria-label="Open navigation">☰</button>
+        <div class="mobile-brand"><span class="brand-mark">cc</span>CadetConnect</div>
+        <label class="search">
+          <span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="Search CadetConnect" aria-label="Search CadetConnect">
+        </label>
+        <div class="top-actions">
+          <button class="icon-button" data-action="notifications" aria-label="Notifications">♧<b class="notification-dot"></b></button>
+          <button class="avatar avatar-olive avatar-small" data-action="login" aria-label="Open demo account">AO</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="view active" id="feed-view">
+          <div class="page-heading">
+            <div><p class="eyebrow">THURSDAY, 18 SEPTEMBER</p><h1>Good morning, Amaka<span class="heading-dot">.</span></h1><p class="subheading">A quick look at what’s happening in your community.</p></div>
+            <button class="primary-button" id="new-post">＋ Share an update</button>
+          </div>
+          <div class="feed-layout">
+            <div class="feed-column">
+              <div class="composer">
+                <div class="avatar avatar-olive">AO</div><button class="composer-input" id="new-post-alt">What’s on your mind, Amaka?</button><button class="composer-media" aria-label="Add photo">▧</button>
+              </div>
+              <article class="post">
+                <div class="post-head"><div class="avatar avatar-sand">TO</div><div><strong>Tunde Ojo <span class="verified">✓</span></strong><small>Level 400 · 24 min ago</small></div><button class="more" data-action="report" aria-label="More post options">•••</button></div>
+                <p class="post-copy">Small wins count. Finished my research outline today and I’m feeling good about the progress. What are you working on this week? <span class="mention">#CadetLife</span></p>
+                <div class="post-photo photo-study" role="img" aria-label="Notebook and coffee on a desk"></div>
+                <div class="post-stats"><span>♡ 24 likes</span><span>8 comments</span></div>
+                <div class="post-actions"><button>♡ Like</button><button>◌ Comment</button><button>↗ Share</button></div>
+              </article>
+              <article class="post">
+                <div class="post-head"><div class="avatar avatar-coral">CC</div><div><strong>CadetConnect <span class="verified">✓</span></strong><small>Community team · 2 hrs ago</small></div><button class="more" data-action="report" aria-label="More post options">•••</button></div>
+                <div class="announcement"><span class="announcement-icon">✦</span><div><strong>Community reminder</strong><p>Keep conversations respectful and never share confidential operational information. Our report tools are always available if something feels off.</p></div></div>
+                <div class="post-stats"><span>♡ 41 likes</span><span>12 comments</span></div>
+                <div class="post-actions"><button>♡ Like</button><button>◌ Comment</button><button>↗ Share</button></div>
+              </article>
+            </div>
+            <aside class="right-rail">
+              <section class="rail-section"><div class="rail-title"><h2>Trending communities</h2><button data-view-link="communities">See all</button></div>
+                <a class="community-row" href="#"><span class="community-icon icon-gold">✎</span><span><strong>Study Circle</strong><small>842 members</small></span><b>›</b></a>
+                <a class="community-row" href="#"><span class="community-icon icon-green">♧</span><span><strong>Fitness & Wellness</strong><small>516 members</small></span><b>›</b></a>
+                <a class="community-row" href="#"><span class="community-icon icon-purple">♫</span><span><strong>Creative Corner</strong><small>289 members</small></span><b>›</b></a>
+              </section>
+              <section class="rail-section upcoming"><div class="rail-title"><h2>Coming up</h2><button>Calendar</button></div><div class="event"><span class="date-block"><b>22</b><small>SEP</small></span><span><strong>Inter-level game night</strong><small>6:00 PM · Social Hall</small></span></div><div class="event"><span class="date-block"><b>28</b><small>SEP</small></span><span><strong>Wellness check-in</strong><small>10:00 AM · Community room</small></span></div></section>
+              <p class="rail-footer">CadetConnect · <a href="#">Community guidelines</a> · <a href="#">Privacy</a></p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="chats-view"><div class="page-heading compact"><div><p class="eyebrow">MESSAGES</p><h1>Your conversations<span class="heading-dot">.</span></h1><p class="subheading">Stay connected with your people.</p></div><button class="primary-button">＋ New message</button></div><div class="chat-layout"><div class="chat-list"><label class="chat-search">⌕ <input placeholder="Search messages" aria-label="Search messages"></label><button class="chat-row selected"><span class="avatar avatar-sand">TO</span><span><strong>Tunde Ojo</strong><small>That sounds great, thanks!</small></span><time>10:42</time></button><button class="chat-row"><span class="avatar avatar-coral">ZB</span><span><strong>Zainab Bello</strong><small>Sent a photo</small></span><time>Yesterday</time><b class="unread">2</b></button><button class="chat-row"><span class="avatar avatar-purple">LM</span><span><strong>Level 400 Study Group</strong><small>David: See you at 4pm</small></span><time>Tue</time></button><button class="chat-row"><span class="avatar avatar-green">KN</span><span><strong>Kelechi Nwosu</strong><small>Voice message</small></span><time>Mon</time></button></div><div class="chat-panel"><div class="chat-panel-head"><span class="avatar avatar-sand">TO</span><div><strong>Tunde Ojo <span class="verified">✓</span></strong><small>Active now</small></div><button class="more" data-action="report">•••</button></div><div class="messages"><div class="message received">Hey Amaka! How did the presentation go?<small>10:35</small></div><div class="message sent">It went better than I expected 😊 Thanks for asking!<small>10:37 · Seen</small></div><div class="message received">That’s great to hear. We should celebrate with a game of chess soon.</div><div class="message sent">Absolutely. I’m in!<small>10:42 · Seen</small></div></div><form class="message-form"><input placeholder="Write a message..." aria-label="Write a message"><button aria-label="Send message">↑</button></form></div></div></section>
+
+        <section class="view" id="marketplace-view"><div class="page-heading compact"><div><p class="eyebrow">PEER-TO-PEER</p><h1>Marketplace<span class="heading-dot">.</span></h1><p class="subheading">Useful finds, shared by your community.</p></div><button class="primary-button">＋ List an item</button></div><div class="market-toolbar"><div class="filter-pills"><button class="pill active">All items</button><button class="pill">Study</button><button class="pill">Fashion</button><button class="pill">Tech</button><button class="pill">Wellness</button></div><label class="market-search">⌕ <input id="market-search" placeholder="Search marketplace" aria-label="Search marketplace"></label></div><div class="product-grid"><article class="product"><div class="product-image img-backpack"><span>Study</span><button aria-label="Save item">♡</button></div><div class="product-info"><div><h3>Olive utility backpack</h3><p>Lightly used · Ikeja</p></div><strong>₦18,500</strong><small>Listed by <b>Chioma E.</b> <span class="verified">✓</span></small></div></article><article class="product"><div class="product-image img-watch"><span>Accessories</span><button aria-label="Save item">♡</button></div><div class="product-info"><div><h3>Classic field watch</h3><p>Like new · Abuja</p></div><strong>₦12,000</strong><small>Listed by <b>Yusuf M.</b> <span class="verified">✓</span></small></div></article><article class="product"><div class="product-image img-shoes"><span>Wellness</span><button aria-label="Save item">♡</button></div><div class="product-info"><div><h3>Training sneakers · size 42</h3><p>Good condition · Kaduna</p></div><strong>₦24,000</strong><small>Listed by <b>David A.</b> <span class="verified">✓</span></small></div></article><article class="product"><div class="product-image img-lamp"><span>Study</span><button aria-label="Save item">♡</button></div><div class="product-info"><div><h3>Rechargeable reading lamp</h3><p>New · Lagos</p></div><strong>₦9,500</strong><small>Listed by <b>Favour I.</b> <span class="verified">✓</span></small></div></article><article class="product"><div class="product-image img-shirt"><span>Fashion</span><button aria-label="Save item">♡</button></div><div class="product-info"><div><h3>Vintage varsity jacket</h3><p>Good condition · Enugu</p></div><strong>₦27,000</strong><small>Listed by <b>Ola T.</b> <span class="verified">✓</span></small></div></article><article class="product"><div class="product-image img-headphones"><span>Tech</span><button aria-label="Save item">♡</button></div><div class="product-info"><div><h3>Wireless headphones</h3><p>Like new · Port Harcourt</p></div><strong>₦35,000</strong><small>Listed by <b>Maryam S.</b> <span class="verified">✓</span></small></div></article></div></section>
+
+        <section class="view" id="communities-view"><div class="page-heading compact"><div><p class="eyebrow">FIND YOUR PEOPLE</p><h1>Communities<span class="heading-dot">.</span></h1><p class="subheading">Shared interests make academy life richer.</p></div><button class="primary-button">＋ Create community</button></div><div class="community-hero"><div><span class="hero-icon">◎</span><h2>There’s a place for every interest.</h2><p>Join supportive spaces for learning, wellness, creativity, and the things that make you, you.</p></div><div class="member-stack"><div class="avatar avatar-olive">AO</div><div class="avatar avatar-coral">ZB</div><div class="avatar avatar-purple">LM</div><b>+ 1,900 cadets</b></div></div><div class="community-grid"><article class="community-card card-study"><span class="large-community-icon">✎</span><div><h3>Study Circle</h3><p>Share notes, find a study partner, and stay motivated together.</p><small>842 members · 12 active now</small></div><button>Join community</button></article><article class="community-card card-wellness"><span class="large-community-icon">♧</span><div><h3>Fitness & Wellness</h3><p>Simple routines, encouragement, and conversations about feeling well.</p><small>516 members · 8 active now</small></div><button>Join community</button></article><article class="community-card card-creative"><span class="large-community-icon">♫</span><div><h3>Creative Corner</h3><p>Photography, music, writing, and a little room to make things.</p><small>289 members · 5 active now</small></div><button>Join community</button></article><article class="community-card card-alumni"><span class="large-community-icon">↗</span><div><h3>Alumni Connect</h3><p>Learn from graduates and keep the wider community close.</p><small>1,104 members · 22 active now</small></div><button>Join community</button></article></div></section>
+      </div>
+    </main>
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" aria-label="Close">×</button><h2 id="modal-title">Report this post?</h2><p>Help keep CadetConnect useful and respectful. Reports are reviewed by the community team.</p><div class="report-options"><button>Spam or misleading</button><button>Harassment or disrespect</button><button>Confidential operational content</button><button>Something else</button></div><button class="primary-button full" id="confirm-report">Submit report</button></div></div>
+  <div class="modal-backdrop" id="login-modal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="login-title"><button class="modal-close" data-close="login-modal" aria-label="Close">×</button><p class="eyebrow">DEMO ACCOUNT</p><h2 id="login-title">Sign in to CadetConnect</h2><p>This prototype does not send credentials anywhere. Use the demo account to preview the signed-in experience.</p><div class="social-login"><button type="button" data-provider="Google"><span class="provider-letter google-letter">G</span>Continue with Google</button><button type="button" data-provider="Instagram"><span class="provider-letter instagram-letter">◎</span>Continue with Instagram</button><button type="button" data-provider="Apple"><span class="provider-letter apple-letter">●</span>Continue with Apple</button></div><div class="login-divider"><span>or use demo email</span></div><form id="login-form" class="login-form"><label>Email address<input type="email" value="amaka@cadetconnect.demo" required autocomplete="email"></label><label>Password<span class="password-field"><input id="login-password" type="password" value="demo-only" required autocomplete="current-password"><button id="toggle-password" type="button" aria-controls="login-password" aria-pressed="false">Show</button></span></label><button class="primary-button full" type="submit">Continue securely</button></form><small class="security-disclaimer">Production note: provider buttons are demo-only until server-side OAuth, MFA, secure sessions, and verified academy identity checks are configured.</small></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
