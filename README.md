@@ -11,7 +11,7 @@ It is designed around everyday academy community life: keeping up with peers, fi
 - Marketplace with Nigerian naira pricing, images, categories, seller badges, filters, and search
 - Communities area with Study Circle, Fitness & Wellness, Creative Corner, and Alumni Connect
 - Responsive desktop and mobile layouts with a mobile navigation drawer
-- Login-first admin gate with email/password, show-password control, and Google, Instagram, and Apple OAuth placeholders
+- Login-first admin gate with email/password, new-user sign-up, show-password controls, and Google, Instagram, and Apple OAuth placeholders
 - Report and moderation affordances for community safety
 - `SECURITY.md` with the requirements for a production authentication and security implementation
 

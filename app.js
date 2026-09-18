@@ -80,6 +80,37 @@ document.querySelector("#login-form")?.addEventListener("submit", (event) => {
   document.querySelector("#login-modal").classList.remove("open");
   showToast("Admin access granted");
 });
+document.querySelector("#signup-form")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const password = document.querySelector("#signup-password").value;
+  const confirmation = document.querySelector("#signup-confirm").value;
+  const error = document.querySelector("#signup-error");
+  if (password.length < 8 || password !== confirmation) {
+    error.hidden = false;
+    return;
+  }
+  error.hidden = true;
+  sessionStorage.setItem("cadetconnect-admin-auth", "true");
+  appShell?.classList.remove("auth-locked");
+  loginModal?.classList.remove("open");
+  showToast("Account created for this preview session");
+});
+document.querySelectorAll("[data-auth-mode]").forEach((button) => button.addEventListener("click", () => {
+  const signup = button.dataset.authMode === "signup";
+  document.querySelector("#login-form").hidden = signup;
+  document.querySelector("#signup-form").hidden = !signup;
+  document.querySelector("#auth-eyebrow").textContent = signup ? "NEW ACCOUNT" : "ADMIN ACCESS";
+  document.querySelector("#login-title").textContent = signup ? "Create your CadetConnect account" : "Sign in to CadetConnect";
+  document.querySelector("#auth-description").textContent = signup ? "Join the community with a new account. Your details stay local in this preview." : "Admin authentication is required before the community workspace can be accessed.";
+  button.textContent = signup ? "Already have an account? Sign in" : "New here? Create an account";
+  button.dataset.authMode = signup ? "login" : "signup";
+}));
+document.querySelector(".signup-toggle")?.addEventListener("click", (event) => {
+  const password = document.querySelector("#signup-password");
+  const visible = password.type === "text";
+  password.type = visible ? "password" : "text";
+  event.currentTarget.textContent = visible ? "Show" : "Hide";
+});
 document.querySelector("#toggle-password")?.addEventListener("click", (event) => {
   const password = document.querySelector("#login-password");
   const visible = password.type === "text";
