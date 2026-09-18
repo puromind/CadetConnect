@@ -26,7 +26,7 @@
       </a>
       <div class="profile-mini">
         <div class="avatar avatar-olive">AO</div>
-        <div><strong>Amaka Okafor</strong><small>Cadet · Level 400</small></div>
+        <div><strong>CadetConnect Admin</strong><small>Administrator · Verified</small></div>
         <span class="verified" title="Verified profile">✓</span>
       </div>
       <nav class="nav-list">
@@ -37,7 +37,7 @@
       </nav>
       <div class="sidebar-footer">
         <button class="nav-item" data-action="notifications"><span class="nav-icon">♧</span>Notifications <b class="notification-dot"></b></button>
-        <button class="nav-item" data-action="settings"><span class="nav-icon">⚙</span>Settings</button>
+        <button class="nav-item" data-action="logout"><span class="nav-icon">↪</span>Sign out</button>
         <div class="safety-note"><span>✦</span><div><strong>Keep it community-safe</strong><small>Share support, not sensitive operational details.</small></div></div>
       </div>
     </aside>
@@ -51,7 +51,7 @@
         </label>
         <div class="top-actions">
           <button class="icon-button" data-action="notifications" aria-label="Notifications">♧<b class="notification-dot"></b></button>
-          <button class="avatar avatar-olive avatar-small" data-action="login" aria-label="Open demo account">AO</button>
+          <button class="avatar avatar-olive avatar-small" data-action="login" aria-label="Open admin account">AD</button>
         </div>
       </header>
 
@@ -102,7 +102,7 @@
   </div>
   <div class="toast" role="status" aria-live="polite"></div>
   <div class="modal-backdrop" id="modal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" aria-label="Close">×</button><h2 id="modal-title">Report this post?</h2><p>Help keep CadetConnect useful and respectful. Reports are reviewed by the community team.</p><div class="report-options"><button>Spam or misleading</button><button>Harassment or disrespect</button><button>Confidential operational content</button><button>Something else</button></div><button class="primary-button full" id="confirm-report">Submit report</button></div></div>
-  <div class="modal-backdrop" id="login-modal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="login-title"><button class="modal-close" data-close="login-modal" aria-label="Close">×</button><p class="eyebrow">DEMO ACCOUNT</p><h2 id="login-title">Sign in to CadetConnect</h2><p>This prototype does not send credentials anywhere. Use the demo account to preview the signed-in experience.</p><div class="social-login"><button type="button" data-provider="Google"><span class="provider-letter google-letter">G</span>Continue with Google</button><button type="button" data-provider="Instagram"><span class="provider-letter instagram-letter">◎</span>Continue with Instagram</button><button type="button" data-provider="Apple"><span class="provider-letter apple-letter">●</span>Continue with Apple</button></div><div class="login-divider"><span>or use demo email</span></div><form id="login-form" class="login-form"><label>Email address<input type="email" value="amaka@cadetconnect.demo" required autocomplete="email"></label><label>Password<span class="password-field"><input id="login-password" type="password" value="demo-only" required autocomplete="current-password"><button id="toggle-password" type="button" aria-controls="login-password" aria-pressed="false">Show</button></span></label><button class="primary-button full" type="submit">Continue securely</button></form><small class="security-disclaimer">Production note: provider buttons are demo-only until server-side OAuth, MFA, secure sessions, and verified academy identity checks are configured.</small></div></div>
+  <div class="modal-backdrop" id="login-modal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="login-title"><p class="eyebrow">ADMIN ACCESS</p><h2 id="login-title">Sign in to CadetConnect</h2><p>Admin authentication is required before the community workspace can be accessed.</p><div class="social-login"><button type="button" data-provider="Google"><span class="provider-letter google-letter">G</span>Continue with Google</button><button type="button" data-provider="Instagram"><span class="provider-letter instagram-letter">◎</span>Continue with Instagram</button><button type="button" data-provider="Apple"><span class="provider-letter apple-letter">●</span>Continue with Apple</button></div><div class="login-divider"><span>or use admin credentials</span></div><form id="login-form" class="login-form"><label>Admin email<input id="admin-email" type="email" value="admin@cadetconnect.demo" required autocomplete="username"></label><label>Admin password<span class="password-field"><input id="login-password" type="password" value="admin-demo-only" required autocomplete="current-password"><button id="toggle-password" type="button" aria-controls="login-password" aria-pressed="false">Show</button></span></label><p class="login-error" id="login-error" role="alert" hidden>Use the configured admin credentials to continue.</p><button class="primary-button full" type="submit">Sign in as admin</button></form><small class="security-disclaimer">This static preview uses a local admin session only. Production access must use server-side authentication, MFA, secure sessions, and verified academy identity checks.</small></div></div>
   <script src="app.js"></script>
 </body>
 </html>

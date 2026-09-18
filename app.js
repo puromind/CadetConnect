@@ -1,6 +1,15 @@
 const views = ["feed", "chats", "marketplace", "communities"];
 const toast = document.querySelector(".toast");
 const launchSplash = document.querySelector("#launch-splash");
+const appShell = document.querySelector(".app-shell");
+const loginModal = document.querySelector("#login-modal");
+const ADMIN_EMAIL = "admin@cadetconnect.demo";
+const ADMIN_PASSWORD = "admin-demo-only";
+const isAuthenticated = sessionStorage.getItem("cadetconnect-admin-auth") === "true";
+if (!isAuthenticated) {
+  appShell?.classList.add("auth-locked");
+  loginModal?.classList.add("open");
+}
 window.setTimeout(() => {
   launchSplash?.classList.add("is-hidden");
   window.setTimeout(() => launchSplash?.remove(), 420);
@@ -39,6 +48,12 @@ document.querySelectorAll(".pill").forEach((pill) => pill.addEventListener("clic
 document.querySelectorAll("[data-action]").forEach((button) => button.addEventListener("click", () => {
   if (button.dataset.action === "report") document.querySelector("#modal").classList.add("open");
   else if (button.dataset.action === "login") document.querySelector("#login-modal").classList.add("open");
+  else if (button.dataset.action === "logout") {
+    sessionStorage.removeItem("cadetconnect-admin-auth");
+    appShell?.classList.add("auth-locked");
+    loginModal?.classList.add("open");
+    showToast("You have been signed out");
+  }
   else showToast(button.dataset.action === "notifications" ? "You’re all caught up" : "Settings are coming soon");
 }));
 document.querySelector(".modal-close")?.addEventListener("click", () => document.querySelector("#modal").classList.remove("open"));
@@ -52,8 +67,18 @@ document.querySelector("#confirm-report")?.addEventListener("click", () => {
 });
 document.querySelector("#login-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
+  const email = document.querySelector("#admin-email").value.trim().toLowerCase();
+  const password = document.querySelector("#login-password").value;
+  const error = document.querySelector("#login-error");
+  if (email !== ADMIN_EMAIL || password !== ADMIN_PASSWORD) {
+    error.hidden = false;
+    return;
+  }
+  error.hidden = true;
+  sessionStorage.setItem("cadetconnect-admin-auth", "true");
+  appShell?.classList.remove("auth-locked");
   document.querySelector("#login-modal").classList.remove("open");
-  showToast("Demo sign-in complete — no credentials were transmitted");
+  showToast("Admin access granted");
 });
 document.querySelector("#toggle-password")?.addEventListener("click", (event) => {
   const password = document.querySelector("#login-password");

@@ -11,7 +11,7 @@ It is designed around everyday academy community life: keeping up with peers, fi
 - Marketplace with Nigerian naira pricing, images, categories, seller badges, filters, and search
 - Communities area with Study Circle, Fitness & Wellness, Creative Corner, and Alumni Connect
 - Responsive desktop and mobile layouts with a mobile navigation drawer
-- Demo sign-in modal with email/password, show-password control, and Google, Instagram, and Apple OAuth placeholders
+- Login-first admin gate with email/password, show-password control, and Google, Instagram, and Apple OAuth placeholders
 - Report and moderation affordances for community safety
 - `SECURITY.md` with the requirements for a production authentication and security implementation
 
@@ -44,9 +44,11 @@ Then visit `http://localhost:8080`.
 
 ## Important security boundary
 
-This repository is a front-end prototype. The sign-in form and social provider buttons are demo UI only:
+This repository is a front-end prototype. The admin gate, sign-in form, and social provider buttons are demo UI only:
 
+- The workspace is hidden until the local admin session is accepted.
 - No credentials are sent to a server.
+- The current preview accepts `admin@cadetconnect.demo` with password `admin-demo-only`; these values are embedded only to support local demonstration.
 - No users, sessions, messages, listings, or reports are persisted.
 - Google, Instagram, and Apple buttons are placeholders until real OAuth integrations are configured.
 - Verified badges and moderation controls are visual affordances, not security controls.
