@@ -1,5 +1,10 @@
 const views = ["feed", "chats", "marketplace", "communities"];
 const toast = document.querySelector(".toast");
+const launchSplash = document.querySelector("#launch-splash");
+window.setTimeout(() => {
+  launchSplash?.classList.add("is-hidden");
+  window.setTimeout(() => launchSplash?.remove(), 420);
+}, 1180);
 function showToast(message) {
   toast.textContent = message;
   toast.classList.add("show");
